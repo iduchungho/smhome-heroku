@@ -38,8 +38,10 @@ func GetApplication() *App {
 func (app *App) Run() {
 	if app.r != nil {
 
+		////////////////////////////////
 		// comment line for deployment heroku
-		utils.LoadEnvFile()
+		// utils.LoadEnvFile()\
+		/////////////////////////////////
 
 		route.SenSorRoute(app.r)
 		route.UserRoute(app.r)
