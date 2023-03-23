@@ -1,9 +1,9 @@
 package route
 
 import (
-	"smhome/modules/controller"
-	ctrl "smhome/modules/controller"
-	mdw "smhome/modules/middleware"
+	"smhome/controller"
+	ctrl "smhome/controller"
+	mdw "smhome/middleware"
 
 	"github.com/gin-gonic/gin"
 )

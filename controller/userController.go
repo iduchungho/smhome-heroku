@@ -3,9 +3,9 @@ package controller
 import (
 	"net/http"
 	"os"
-	"smhome/modules/model"
-	"smhome/modules/service"
-	"smhome/modules/utils"
+	"smhome/model"
+	"smhome/service"
+	"smhome/utils"
 
 	"github.com/gin-gonic/gin"
 )

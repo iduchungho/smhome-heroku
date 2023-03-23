@@ -1,6 +1,6 @@
 package service
 
-import md "smhome/modules/model"
+import md "smhome/model"
 
 func newAction() *md.Actions {
 	return &md.Actions{}

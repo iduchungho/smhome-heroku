@@ -1,7 +1,7 @@
 package application
 
 import (
-	"smhome/modules/route"
+	"smhome/route"
 	"sync"
 
 	"github.com/gin-gonic/gin"

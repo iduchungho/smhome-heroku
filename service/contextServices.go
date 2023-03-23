@@ -2,7 +2,7 @@ package service
 
 import (
 	"errors"
-	interfaces "smhome/modules/interface"
+	interfaces "smhome/interface"
 )
 
 // Factory method Design Pattern

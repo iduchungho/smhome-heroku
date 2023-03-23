@@ -3,7 +3,7 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"smhome/modules/service"
+	"smhome/service"
 )
 
 func GetTemperature(c *gin.Context) {

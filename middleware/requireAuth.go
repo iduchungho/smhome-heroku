@@ -6,8 +6,8 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"net/http"
 	"os"
-	"smhome/modules/database"
-	"smhome/modules/model"
+	"smhome/database"
+	"smhome/model"
 	"time"
 
 	"github.com/gin-gonic/gin"

@@ -10,7 +10,7 @@ import (
 	"io"
 	"net/http"
 	"os"
-	"smhome/modules/database"
+	"smhome/database"
 )
 
 type Sensor struct {
