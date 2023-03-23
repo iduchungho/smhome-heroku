@@ -1,13 +1,15 @@
+/*
+main.go file
+Author: Ho Duc Hung
+Start api: cd /src -> make run or go run main.go app.go
+*/
 package main
 
-import "github.com/gin-gonic/gin"
+import app "smhome/app"
 
 func main() {
-	r := gin.Default()
-	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Run()
+	// create application
+	app := app.GetApplication()
+	// app run localhost:8080
+	app.Run()
 }
