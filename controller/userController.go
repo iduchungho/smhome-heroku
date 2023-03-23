@@ -59,7 +59,7 @@ func Login(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"token": tokenString,
 	})
-	return
+
 }
 
 func AddNewUser(c *gin.Context) {
@@ -107,7 +107,7 @@ func AddNewUser(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"data": userMd,
 	})
-	return
+
 }
 
 func Logout(c *gin.Context) {
@@ -121,6 +121,6 @@ func Logout(c *gin.Context) {
 
 func Public(c *gin.Context) {
 	c.JSON(200, gin.H{
-		"message": "pong",
+		"message": os.Getenv("DB_NAME"),
 	})
 }
