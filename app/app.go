@@ -46,7 +46,7 @@ func (app *App) Run() {
 		route.SenSorRoute(app.r)
 		route.UserRoute(app.r)
 
-		err := app.r.Run("localhost:8080")
+		err := app.r.Run()
 		if err != nil {
 			panic("Can't run gin engine")
 		}
