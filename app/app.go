@@ -36,15 +36,15 @@ func GetApplication() *App {
 
 func (app *App) Run() {
 	if app.r != nil {
-		err := godotenv.Load()
-		if err != nil {
-			panic("Failed to load .env file")
-		}
+		// err := godotenv.Load()
+		// if err != nil {
+		// 	panic("Failed to load .env file")
+		// }
 		
 		route.SenSorRoute(app.r)
 		route.UserRoute(app.r)
 
-		err = app.r.Run(":8080")
+		err := app.r.Run(":8080")
 		if err != nil {
 			panic("Can't run gin engine")
 		}
