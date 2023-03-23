@@ -2,9 +2,11 @@ package application
 
 import (
 	"smhome/route"
+	"smhome/utils"
 	"sync"
 
 	"github.com/gin-gonic/gin"
+
 )
 
 type App struct {
@@ -35,15 +37,14 @@ func GetApplication() *App {
 
 func (app *App) Run() {
 	if app.r != nil {
-		// err := godotenv.Load()
-		// if err != nil {
-		// 	panic("Failed to load .env file")
-		// }
-		
+
+		// comment line for deployment heroku
+		utils.LoadEnvFile()
+
 		route.SenSorRoute(app.r)
 		route.UserRoute(app.r)
 
-		err := app.r.Run()
+		err := app.r.Run("localhost:8080")
 		if err != nil {
 			panic("Can't run gin engine")
 		}
