@@ -16,10 +16,10 @@ var connect *mongo.Client
 var lock = &sync.Mutex{}
 
 func getURI() string {
-	err := godotenv.Load()
-	if err != nil {
-		panic("Failed to load .env file")
-	}
+	// err := godotenv.Load()
+	// if err != nil {
+	// 	panic("Failed to load .env file")
+	// }
 
 	user := os.Getenv("DB_USER")
 	password := os.Getenv("DB_PASSWORD")

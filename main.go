@@ -5,11 +5,11 @@ Start api: cd /src -> make run or go run main.go app.go
 */
 package main
 
-import app "smhome/app"
+import appli "smhome/app"
 
 func main() {
 	// create application
-	app := app.GetApplication()
+	app := appli.GetApplication()
 	// app run localhost:8080
 	app.Run()
 }
