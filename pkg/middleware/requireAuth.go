@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"os"
 	"smhome/database"
-	"smhome/model"
+	"smhome/app/model"
 	"time"
 
 	"github.com/gin-gonic/gin"

@@ -1,12 +1,12 @@
 package application
 
 import (
-	"smhome/route"
-	// "smhome/utils"
+	"os"
+	"smhome/pkg/route"
+	// "smhome/pkg/utils"
 	"sync"
 
 	"github.com/gin-gonic/gin"
-
 )
 
 type App struct {
@@ -40,15 +40,23 @@ func (app *App) Run() {
 
 		////////////////////////////////
 		// comment line for deployment heroku
-		// utils.LoadEnvFile()\
+		// utils.LoadEnvFile()
 		/////////////////////////////////
 
 		route.SenSorRoute(app.r)
 		route.UserRoute(app.r)
 
-		err := app.r.Run()
-		if err != nil {
-			panic("Can't run gin engine")
+		host := os.Getenv("HOST")
+		if host != "" {
+			err := app.r.Run(host)
+			if err != nil {
+				panic("Can't run gin engine")
+			}
+		} else {
+			err := app.r.Run()
+			if err != nil {
+				panic("Can't run gin engine")
+			}
 		}
 
 	} else {

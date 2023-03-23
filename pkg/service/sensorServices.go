@@ -1,6 +1,6 @@
 package service
 
-import "smhome/model"
+import "smhome/app/model"
 
 func newSensors() *model.Sensors {
 	return &model.Sensors{}
