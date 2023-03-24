@@ -2,7 +2,6 @@ package utils
 
 import (
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/joho/godotenv"
 	"golang.org/x/crypto/bcrypt"
 	"os"
 	"strconv"
@@ -10,10 +9,6 @@ import (
 )
 
 func GenPassword(pass string) ([]byte, error) {
-	errEnv := godotenv.Load()
-	if errEnv != nil {
-		return nil, errEnv
-	}
 	cost, _ := strconv.Atoi(os.Getenv("COST"))
 	hash, err := bcrypt.GenerateFromPassword([]byte(pass), cost)
 	return hash, err
